@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 // Set axios default base URL
-axios.defaults.baseURL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+axios.defaults.baseURL = process.env.REACT_APP_API_URL
 
 const AuthContext = createContext();
 
@@ -27,7 +27,7 @@ export const AuthProvider = ({ children }) => {
         setAuthToken(null);
         setUser(null);
         setIsAuthenticated(false);
-        
+
         // Force redirect to login
         navigate('/login');
     }, []);
@@ -60,7 +60,7 @@ export const AuthProvider = ({ children }) => {
             setAuthToken(token);
             setUser(userData);
             setIsAuthenticated(true);
-            
+
             // Navigate based on user role
             if (userData.isAdmin) {
                 navigate('/admin');
@@ -106,12 +106,12 @@ export const AuthProvider = ({ children }) => {
     };
 
     return (
-        <AuthContext.Provider value={{ 
-            authToken, 
+        <AuthContext.Provider value={{
+            authToken,
             user,
-            accountDetails, 
-            error, 
-            login, 
+            accountDetails,
+            error,
+            login,
             logout,
             fetchAccountOverview,
             isAuthenticated,
