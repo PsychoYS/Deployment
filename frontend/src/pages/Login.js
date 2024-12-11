@@ -13,7 +13,7 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const endpoint = isAdmin ? `${process.env.REACT_APP_API_URL} /api/users/admin-login` : '/api/users/login';
+            const endpoint = isAdmin ? `/api/users/admin-login` : '/api/users/login';
             const payload = isAdmin ? { adminPassword: password } : { email, password };
 
             console.log('Attempting login to:', endpoint);
