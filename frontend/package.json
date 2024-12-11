@@ -1,0 +1,43 @@
+{
+    "name": "bankmanagement-frontend",
+    "version": "1.0.0",
+    "private": true,
+    "dependencies": {
+        "@emotion/react": "^11.11.3",
+        "@emotion/styled": "^11.11.0",
+        "@mapbox/mapbox-gl-geocoder": "^5.0.3",
+        "@mui/icons-material": "^5.15.10",
+        "@mui/material": "^5.15.10",
+        "axios": "^1.6.7",
+        "jwt-decode": "^4.0.0",
+        "mapbox-gl": "^3.8.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-router-dom": "^6.22.1",
+        "react-scripts": "5.0.1"
+    },
+    "scripts": {
+        "start": "set PORT=3001 && react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+        "autoprefixer": "^10.4.17",
+        "postcss": "^8.4.35",
+        "tailwindcss": "^3.4.1"
+    }
+}

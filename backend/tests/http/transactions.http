@@ -1,0 +1,31 @@
+@baseUrl = http://localhost:5000
+@auth_token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NTFhMTIwYmVkYTg3Zjg3ZTJlMjhjYiIsInVzZXJuYW1lIjoieXUxMjM0IiwiaWF0IjoxNzMzODgzMTUxLCJleHAiOjE3MzY0NzUxNTF9.ipE5vzW9FlRDU-hDZj31NIGb3Gb46z-qYklg8z8tAug
+
+### Test Internal Transfer
+POST {{baseUrl}}/api/transfer/internal
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+{
+    "toAccount": "admin1",
+    "amount": 100,
+    "description": "Test transfer",
+    "fromAccount": "yu1234"
+}
+
+### Create Scheduled Transfer
+POST {{baseUrl}}/api/scheduled-transfer/create
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+{
+    "recipientAccount": "admin1",
+    "amount": 50,
+    "frequency": "monthly",
+    "startDate": "2024-12-15",
+    "description": "Monthly scheduled transfer"
+}
+
+### Get Scheduled Transfers List
+GET {{baseUrl}}/api/scheduled-transfer/list
+Authorization: Bearer {{auth_token}} 

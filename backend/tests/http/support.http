@@ -1,0 +1,30 @@
+@baseUrl = http://localhost:5000
+@auth_token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NTFhMTIwYmVkYTg3Zjg3ZTJlMjhjYiIsInVzZXJuYW1lIjoieXUxMjM0IiwiaWF0IjoxNzMzODgzMTUxLCJleHAiOjE3MzY0NzUxNTF9.ipE5vzW9FlRDU-hDZj31NIGb3Gb46z-qYklg8z8tAug
+
+### Test Create Dispute
+POST {{baseUrl}}/api/disputes
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+{
+    "description": "Issue with recent transaction"
+}
+### Test Submit Feedback
+POST {{baseUrl}}/api/feedback
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+{
+    "subject": "App Experience",
+    "message": "Great banking service",
+    "rating": 5
+}
+
+### Test Chat Message
+POST {{baseUrl}}/api/chat
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+{
+    "message": "Hello"
+} 

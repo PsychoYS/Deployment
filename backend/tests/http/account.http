@@ -1,0 +1,13 @@
+@baseUrl = http://localhost:5000
+@auth_token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NTFhMTIwYmVkYTg3Zjg3ZTJlMjhjYiIsInVzZXJuYW1lIjoieXUxMjM0IiwiaWF0IjoxNzMzODgzMTUxLCJleHAiOjE3MzY0NzUxNTF9.ipE5vzW9FlRDU-hDZj31NIGb3Gb46z-qYklg8z8tAug
+
+### Test Get Account Overview
+GET {{baseUrl}}/api/account/overview
+Authorization: Bearer {{auth_token}}
+
+### Test Get Balance Insights
+GET {{baseUrl}}/api/balance/insights
+Authorization: Bearer {{auth_token}}
+### Test Get User Profile
+GET {{baseUrl}}/api/users/me
+Authorization: Bearer {{auth_token}} 
