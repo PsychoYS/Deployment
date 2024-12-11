@@ -8,7 +8,7 @@ export const refreshToken = async () => {
         const storedRefreshToken = localStorage.getItem('refreshToken');
         if (!storedRefreshToken) throw new Error('No refresh token available');
 
-        const response = await axios.post(`http://localhost:5000/api/auth/refresh`, { refreshToken: storedRefreshToken });
+        const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/refresh`, { refreshToken: storedRefreshToken });
         const { accessToken } = response.data;
 
         localStorage.setItem('token', accessToken); // Save new access token
